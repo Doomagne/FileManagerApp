@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'file-stored',
+    loadChildren: () => import('./file-stored/file-stored.module').then( m => m.FileStoredPageModule)
+  },
 ];
 
 @NgModule({
